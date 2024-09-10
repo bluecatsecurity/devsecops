@@ -6,4 +6,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Print hola
-        run: python hello.py
+        run: python test/hello.py
