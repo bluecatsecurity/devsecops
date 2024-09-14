@@ -7,7 +7,7 @@ on:
 
 jobs:
  unit-test:
-  runs-on: ubuntu-latest
+  run-on: ubuntu-latest
   steps:
    - name: Utilizo el repo en el que estoy
    - uses: actions/checkout@v3
