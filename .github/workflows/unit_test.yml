@@ -1,24 +1,23 @@
 name: Python unit test
 
 on: 
- pull_request:
-  branches:
-   - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
- unit-test:
-  runs-on: ubuntu-latest
-  steps:
-   - name: Utilizo el repo en el que estoy
-   - uses: actions/checkout@v3
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-   - name: Instalo python
-   - uses: actions/setup-python@v3
-     with:
-      python-version: '3.11'
+      - name: Instalo python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.11'
   
-   - name: Instalo pytest
-     run: pip install pytest
+      - name: Instalo pytest
+        run: pip install pytest
     
-   - name: Ejecuto pytest
-     run: pytest ./tests
+      - name: Ejecuto pytest
+        run: pytest ./tests
