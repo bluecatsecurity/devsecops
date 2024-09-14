@@ -7,9 +7,8 @@ on:
 
 jobs:
  unit-test:
-  run-on: ubuntu-latest
+  runs-on: ubuntu-latest
   steps:
-   - name: Utilizo el repo en el que estoy
    - uses: actions/checkout@v3
 
    - name: Instalo python
