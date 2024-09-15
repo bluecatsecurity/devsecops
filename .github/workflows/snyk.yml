@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  name: snyk
+  snyk:
     runs-on: ubuntu-latest
     steps:
       - name: Repositorio
@@ -27,4 +27,4 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=high --package-manager=pip
+          args: --severity-threshold=high
